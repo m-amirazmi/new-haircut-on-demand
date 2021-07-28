@@ -1,9 +1,10 @@
 import React from 'react'
+import { MainLayout } from '../layouts/MainLayout'
 
 export const Shops = () => {
     return (
-        <div>
+        <MainLayout>
             This is shops
-        </div>
+        </MainLayout>
     )
 }

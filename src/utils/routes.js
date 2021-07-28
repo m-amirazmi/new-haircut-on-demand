@@ -10,8 +10,8 @@ import { Shops } from "../pages/Shops";
 export const routes = [
 
     // GENERAL PAGES
-    { path: '/', name: 'Home', component: Home, showOnNav: false, isProtected: false },
-    { path: '/shops', name: 'Shops', component: Shops, showOnNav: true, isProtected: false },
+    { path: '/', name: 'Home', component: Home, showOnNav: true, isProtected: false },
+    { path: '/shops', name: 'Shops', component: Shops, showOnNav: false, isProtected: false },
     { path: '/login', name: 'Login', component: Login, showOnNav: true, isProtected: false, restricted: true },
     { path: '/register', name: 'Register', component: Register, showOnNav: false, isProtected: false, restricted: true },
 

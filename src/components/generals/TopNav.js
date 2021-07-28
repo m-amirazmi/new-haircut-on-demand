@@ -11,7 +11,7 @@ export const TopNav = () => {
     const toggle = () => setIsOpen(!isOpen);
 
     const renderLinks = () => routes.map((route) => {
-        if (!route.isProtected) return (
+        if (!route.isProtected && route.showOnNav) return (
             <NavItem className={styles.nav__item}>
                 <Link to={route.path}>{route.name}</Link>
             </NavItem>

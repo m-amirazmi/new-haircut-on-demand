@@ -1,24 +1,28 @@
 import React from 'react'
-import { useHistory } from 'react-router-dom'
 import { MainLayout } from '../layouts/MainLayout'
-import { login } from '../utils/auth'
-import { Button } from 'reactstrap'
+import { HomeFilter } from '../components/HomeFilter'
+import { FilterLocation } from '../components/FilterLocation'
+import { BarberList } from '../components/BarberList'
+import { Container, Row, Col } from 'reactstrap'
+import styles from '../assets/css/Home.module.css'
 
 export const Home = () => {
 
-    const { push } = useHistory()
-
-    const handleLogin = () => {
-        login()
-        push('/')
-    }
-
     return (
         <MainLayout>
-            This is main layout
-            <Button onClick={handleLogin}>
-                Login
-            </Button>
+            <Container className={styles.content}>
+                <Row>
+                    <Col md={3}>
+                        <div className={styles.sidebar}>
+                            <HomeFilter />
+                        </div>
+                    </Col>
+                    <Col md={9}>
+                        <FilterLocation />
+                        <BarberList />
+                    </Col>
+                </Row>
+            </Container>
         </MainLayout>
     )
 }
